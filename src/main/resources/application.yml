@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    # config
+    url: jdbc:opengauss://1.94.197.254:26000/cloud_test
+    username: czf
+    password: CZFtofuture2024.
+    driver-class-name: org.opengauss.Driver
+    hikari:
+      connection-init-sql: SET search_path TO cloud
+
+# print logs
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 关闭数据库下划线自动转驼峰
+    map-underscore-to-camel-case: false
